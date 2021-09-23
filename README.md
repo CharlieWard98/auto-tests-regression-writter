@@ -18,9 +18,8 @@ This repo is a working POC showing how regression test results could be written 
 - I imagine default behaviour will be for the `assert_lib` to **not**  write results to a regression test sheet - only for release builds (See below)
 
 ### Release Builds
-- Release build downloads the regression test sheet from S3 and name appropriately for the given OS
+- Release build downloads the regression test sheet from S3 and names appropriately for the given OS
 - Release build passes flags when running the automation tests
-    - Flag to specify results should be written to file
     - Flag to specify location and name of regression sheet to write to
 - The tests run as usual, populating the regression test sheet with Pass/Fail results and messages
 - GoCD publishes the regression tests sheet as an artifact - this can be downloaded and will act as a starting point for the regression tests for said platform
