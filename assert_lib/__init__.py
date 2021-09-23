@@ -8,7 +8,7 @@ for arg in sys.argv:
     if '--write-results=' in arg:
         write_results = True
         reg_sheet_path = arg.split('=')[1]
-        print(f'Reg sheet path - {reg_sheet_path}')
 
-reg_sheet = RegressionSheet(path=reg_sheet_path)
-reg_sheet.load_regression_file()
+if write_results:
+    reg_sheet = RegressionSheet(path=reg_sheet_path)
+    reg_sheet.load_regression_file()
