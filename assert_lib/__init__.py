@@ -1,4 +1,4 @@
-from reg_writer.regression_sheet_writer import RegressionSheet
+from reg_writer.regression_sheet_writer import RegressionSheetWriter
 import sys
 
 write_results = False
@@ -10,5 +10,5 @@ for arg in sys.argv:
         reg_sheet_path = arg.split('=')[1]
 
 if write_results:
-    reg_sheet = RegressionSheet(path=reg_sheet_path)
+    reg_sheet = RegressionSheetWriter(path=reg_sheet_path)
     reg_sheet.load_regression_file()

@@ -1,7 +1,7 @@
 import openpyxl
 
 
-class RegressionSheet:
+class RegressionSheetWriter:
     def __init__(self, path):
         self.path = path
         self.workbook = openpyxl.load_workbook(path)
