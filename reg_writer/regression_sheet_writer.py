@@ -14,7 +14,7 @@ class RegressionSheet:
         self.reg_uid_dict = {}
 
     def load_regression_file(self):
-        """ Load the regression file and populate the uid dictionairy """
+        """ Load the regression file and populate the uid dictionary """
         max_row = self.active_sheet.max_row
 
         for i in range(1, max_row + 1):
@@ -34,4 +34,5 @@ class RegressionSheet:
         # Write message to sheet
         self.active_sheet.cell(column=self.NOTES_COL, row=reg_row, value=message)
 
+        # Save sheet
         self.workbook.save(self.path)
