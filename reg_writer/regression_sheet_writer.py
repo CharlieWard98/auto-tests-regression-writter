@@ -22,8 +22,10 @@ class RegressionSheetWriter:
             if cell.value and cell.value.startswith('REG_'):
                 self.reg_uid_dict[cell.value] = i
 
+
     def write_test_result(self, reg_uid, result, message):
         # Get the row for the reg_uid
+        # Probably need some error handling around here if this returns None (reg_uid doesnt exist)
         reg_row = self.reg_uid_dict.get(reg_uid)
 
         pass_or_fail = 'Pass' if result else 'Fail'
