@@ -7,6 +7,7 @@ This repo is a working POC showing how regression test results could be written 
 - Pip
     - unittest
     - openpyxl
+- Example command - `python main.py --write-results=C:\Code\auto-tests-regression-writter\Windows.xlsx`
 
 ## Practicalities
 ### What needs to change?
